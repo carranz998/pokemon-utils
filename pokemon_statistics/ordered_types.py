@@ -32,7 +32,8 @@ def get_ordered_types():
 
     sorted_df = df.sort_values(
         by=coefficient_columns,
-        key=lambda x: x.str.len()
+        key=lambda x: x.str.len(),
+        ascending=False
     )
 
     for _, row in sorted_df.iterrows():
